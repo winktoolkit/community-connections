@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		
+		<meta name="apple-mobile-web-app-capable" content="no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		
+		<title>Community Connections</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+		<link href='./dojox/mobile/themes/custom/custom.css' rel='stylesheet' type='text/css'>
+    	
+    	<link href='./css/wink-1.4.0.min.css' rel='stylesheet' type='text/css'>
+    	<link href='./css/main.css' rel='stylesheet' type='text/css'>
+  
+    	<script type="text/javascript" src="./dojo/dojo.js" djConfig="async: true"></script>
+	
+		<script type="text/javascript" src="./js/main.js"></script>
+		<script type="text/javascript" src="./js/splash.js"></script>
+		<script type="text/javascript" src="./js/options.js"></script>
+		<script type="text/javascript" src="./js/members.js"></script>
+		<script type="text/javascript" src="./js/member.js"></script>
+		<script type="text/javascript" src="./js/utils.js"></script>
+    </head> 
+    
+	<body>
+		<div id="wrapper" class="wrapper">
+			
+			<div id="splash">
+				<div class="header">
+					<img class="logo" src="./images/logo.png" />
+					<img class="logo" src="./images/foundation.png" />
+				</div>
+				<span style="position: absolute; bottom: 41px; right: 0px; font-size: 65px; color: #fff">Community</span>
+				<span style="position: absolute; bottom: 7px; right: 37px; font-size: 50px; color: #fff;">Connections</span>
+				<div id="enter_button">
+					<span id="spinner" style="font-size: 25px; color: #fff;">
+						loading...
+					</span>
+				</div>
+				<span style="position: absolute; top: 220px; left: 30px; font-size: 10px; color: #d4d1d1; text-align: center">a dojo / wink <br />showcase webapp</span>
+			</div>
+			
+			<div id="options" class="panel">
+				<span style="font-size: 55px; color: #fff; margin-left: -14px;">
+					options
+					<a href="#" onclick="df.options.hide()" style="margin-left: 10px"><img src="./images/close.png" /></a>	
+				</span>
+				<br />
+				<br />
+				<br />
+				<input type="radio" id="rb1" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)" checked><label for="rb1" style="color: #fff;margin-left: 10px">list</label>
+				<br />
+				<br />
+				<input type="radio" id="rb2" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb2" style="color: #fff;margin-left: 10px">carousel</label>
+				<br />
+				<br />
+				<input type="radio" id="rb3" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb3" style="color: #fff;margin-left: 10px">coverflow</label>
+				<br />
+				<br />
+				<input type="radio" id="rb4" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb4" style="color: #fff;margin-left: 10px">mosaic</label>
+				<br />
+				<br />
+				<br />
+				<input id="language" readOnly value="english" onclick="dijit.byId('langPicker').show(this, ['above-centered','below-centered','after','before'])" /><label for="language" style="color: #fff;margin-left: 10px">language</label>
+			</div>
+			
+			<div id="container">
+				<div id="members" class="panel">
+					<div class="header">
+						<img class="logo" src="./images/logo.png" />
+						<span style="position: absolute; top: 6px; right: 135px; font-size: 43px; color: #fff">the</span>
+						<span style="position: absolute; top: 28px; right: -10px; font-size: 55px; color: #fff;">members</span>
+					</div>
+					<div class="wave">
+					</div>
+					<div id="list">
+						<div id="coverflow" style="display: none;" class="wrapper"></div>
+						<div id="coverflow_titles" style="display: none;"></div>
+						<div id="carousel" dojoType="dojox.mobile.Carousel" height="220px" numVisible="1" style="display: none;"></div>
+						<div id="members_scroller" class="wrapper">
+							<div id="scrollContent">
+								<ul id="content" class="w_list w_border">
+								</ul>
+								<div id="mosaic" style="display: none">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<a href="#" onclick="df.options.display()">
+							<img src="./images/menu.png" />
+						</a>
+					</div>
+				</div>
+				<div id="member" class="panel">
+					<div class="header">
+						<img class="logo" src="./images/logo.png" />
+						<img class="back" src="./images/back.png" onclick="df.members.display()" />
+						<span style="position: absolute; top: 6px; right: 165px; font-size: 43px; color: #fff">a</span>
+						<span style="position: absolute; top: 28px; right: -2px; font-size: 55px; color: #fff;">member</span>
+					</div>
+					<div class="wave">
+					</div>
+					<div id="member_scroller" class="wrapper">
+						<div id="scrollContent2">
+							<img id="member_picture" width="114px" height="113px" src="./images/avatar.jpg" class="thumbnail"/>
+							<p id="member_name" class="name">
+								
+							</p>
+							<p id="member_company" class="company">
+								n/a
+							</p>
+							<p id="member_project">
+								n/a
+							</p>
+							<p>
+								<a id="member_twitter" href="javascript:void(0)" target="_blank"><img src="./images/twitter.png" height="36" width="36" class="button" /></a>
+								<a id="member_website" href="javascript:void(0)" target="_blank"><img src="./images/website.png" height="36" width="36" class="button" /></a>
+								<a id="member_location" href="javascript:void(0)" target="_blank"><img src="./images/location.png" height="36" width="36" class="button" /></a>
+							</p>
+							<p id="member_bio" class="description">
+								n/a
+							</p>
+							
+							<p class="description">
+								<b>Learn more about this member:</b>
+							</p>
+							
+							<p id="member_question1" class="description">
+								n/a
+							</p>
+							<p id="member_question2" class="description">
+								n/a
+							</p>
+							<p id="member_question3" class="description">
+								n/a
+							</p>
+							<p id="member_question4" class="description">
+								n/a
+							</p>
+							<p id="member_question5" class="description">
+								n/a
+							</p>
+							<p id="member_question6" class="description">
+								n/a
+							</p>
+							<p id="member_question7" class="description">
+								n/a
+							</p>
+							
+							<p class="description">
+								
+							</p>
+							
+							<p id="member_contributions" class="description">
+								n/a
+							</p>
+							
+							<p id="member_commiter_since" class="description">
+								n/a
+							</p>
+							
+							<p id="member_irc" class="description">
+								n/a
+							</p>
+							
+							<p id="member_facebook" class="description">
+								n/a
+							</p>
+							
+							<p id="member_google_plus" class="description">
+								n/a
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="langPicker" data-dojo-type="dojox.mobile.Opener" data-dojo-props="onHide:df.utils.getLang, onShow:df.utils.setLang">
+	 		<h1 dojoType="dojox.mobile.Heading" label="select">
+				<div dojoType="dojox.mobile.ToolBarButton" label="done" style="position:absolute;width:45px;right:0;" onclick="dijit.byId('langPicker').hide(true)"></div>
+				<div dojoType="dojox.mobile.ToolBarButton" label="cancel" style="position:absolute;width:45px;left:0;" onclick="dijit.byId('langPicker').hide(false)"></div>
+			</h1>
+			
+			<div id="spin" dojoType="dojox.mobile.SpinWheel">
+				<div id="wheel" dojoType="dojox.mobile.SpinWheelSlot" labels="['english','french','german','japanese']" style="width: 100%;"></div>
+			</div>
+		</div>
+	</body>
+</html> 
+		

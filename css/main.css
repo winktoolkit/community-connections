@@ -1,0 +1,352 @@
+html, .mobile body
+{
+	background-color: #eee;
+	
+	padding: 0;
+	margin: 0;
+	
+	font-family: 'Cabin';
+	font-size: 100%;
+	
+	min-height: 416px;
+}
+
+span
+{
+	font-family: 'Cabin';
+	
+	margin: 0;
+	padding: 0;
+}
+
+.header
+{
+	position: relative;
+	background: #eee;
+	height: 88px;
+}
+
+.header .logo
+{
+	position: relative;
+	margin: 13px 0 0 13px;
+	z-index: 201
+}
+
+.header .back
+{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	z-index: 200
+}
+
+.footer
+{
+	background: #eee;
+	border-top: 2px solid #fff;
+	
+	position: absolute;
+	
+	bottom: 0;
+	
+	height: 39px;
+	width: 100%;
+	
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	
+	-webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer img
+{
+	float: right;
+}
+
+.wave
+{
+	position: relative;
+	background: transparent url(../images/wave.png) repeat-x bottom;
+	height: 22px;
+	width: 100%;
+	z-index: 101;
+}
+
+.wrapper
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.panel
+{
+	position: relative;
+	height: 100%;
+	-webkit-box-flex: 0;
+}
+
+#splash
+{
+	height: 100%;
+}
+
+#enter_button
+{
+	background: #000;
+	
+	height:150px;
+	width: 150px;
+	
+	float: right;
+	
+	margin: 30px 37px 0 0;
+	
+	line-height:135px;
+	
+	text-align: center;
+	
+	border-radius: 75px;
+	
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+}
+
+#container
+{
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+	
+	display: -webkit-box;
+	visibility: hidden;
+}
+
+#options
+{
+	background: #4e4e4e;
+	
+	visibility: hidden;
+	
+	box-shadow: inset -4px 4px 15px #000;
+	
+	-webkit-box-shadow: inset -4px 4px 15px #000;
+	-moz-box-shadow: inset -4px 4px 15px #000;
+}
+
+#language
+{
+	display: bloc;
+	border: 1px solid #000;
+	border-radius: 0;
+	margin: -0.5em 3px 0.3em 4px;
+	text-align: center;
+	width: 50px;
+}
+
+#members
+{
+	background: #eee;
+}
+
+#member
+{
+	background: #eee;	
+}
+
+#members_scroller, #member_scroller
+{
+	color: #4e4e4e;
+	position: relative;
+	margin-top: -10px;
+	z-index: 100;
+}
+
+#members_scroller .w_bg_light
+{
+	background: transparent;
+	color: #4e4e4e;
+}
+
+#members_scroller .w_border, #members_scroller .w_border_bottom
+{
+	border-width: 2px;
+	border-color: #e2e1e1;
+}
+
+#members_scroller .w_list_item
+{
+	font-size: 17px;
+}
+
+#members_scroller .w_list_item.preselected
+{
+	background: #ccc;
+	color: #000;
+}
+
+#members_scroller .w_list_item.selected
+{
+	background: #f9f9f9;
+	color: #000;
+}
+
+.thumbnail
+{
+	float: left;
+	border: 2px solid #fff;
+	margin: 15px;
+}
+
+#member_scroller p
+{
+	margin: 0;
+	padding: 0;
+}
+
+#member_scroller a
+{
+	color: #f50;
+	text-decoration: none;
+}
+
+#member_scroller .name, #member_scroller .company
+{
+	padding-top: 12px;
+}
+
+#member_scroller .name
+{
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+	text-shadow: #fff 0px -1px 0px;	
+}
+
+#member_scroller .description
+{
+	color: #b6b6b6;
+	padding: 15px;
+	text-align: justify;
+	clear: both;
+}
+
+#member_scroller .button
+{
+	margin-top: 12px;
+	margin-right: 3px;
+}
+
+#member_scroller .question, #member_scroller .answer
+{
+	border-top: 1px solid #ccc;
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+
+#member_scroller .answer
+{
+	color: #4E4E4E;
+	text-align: right;	
+}
+
+#member_scroller #member_bio
+{
+	color: #4E4E4E;	
+}
+ 		
+#coverflow
+{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.coverflowTitle
+{
+	color: #333;
+	padding-top: 158px;
+	font-size: 35px;
+	text-align: center;
+	text-shadow: #fff 0px -1px 0px;		
+}
+
+#mosaic 
+{
+	padding-top: 10px;	
+}
+
+#mosaic img
+{
+	margin: 5px;	
+}
+
+.mblRadioButtonChecked, .mblRadioButton:checked, .mblRadioButtonChecked.mblRadioButtonSelected, .mblRadioButton:checked.mblRadioButtonSelected
+{
+	background: #fff;
+	border-color: #000;
+}
+
+.mblRadioButton:disabled
+{
+	background: #999;
+}
+
+.mblRadioButton 
+{
+	background: #fff;
+	border-color: #000;
+	
+	border-radius: 0;
+	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.mblTooltip
+{
+	top: 0;
+}
+
+.mblTooltip, .mblHeading
+{
+	background: #fff;
+	border-color: #000;
+}
+
+.mblTooltipAbove .mblTooltipArrow 
+{
+	border-bottom-color: transparent;
+}
+
+.mblColorDefault
+{
+	background: #eee;
+}
+
+.mblCarouselImg 
+{
+	box-shadow: none;
+	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+.mblCarouselHeaderBar 
+{
+	display: none;
+}
+
+.mblCarouselPages
+{
+	margin-top: 16px;
+}
+
+.mblCarouselImgHeaderText
+{
+	color: #4e4e4e;
+	font: 22px 'Cabin';
+	margin-bottom: 17px;
+}
