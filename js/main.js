@@ -55,7 +55,7 @@ df.main = (function()
 			// Display the right options
 			if ( !wink.has('css-perspective'))
 			{	
-				$('rb3').disabled = true;
+				wink.byId('rb3').disabled = true;
 			}
 			
 			// We can now enter the webapp

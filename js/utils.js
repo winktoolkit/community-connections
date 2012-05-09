@@ -36,11 +36,11 @@ df.utils =
 	 */
 	positionElements: function()
 	{
-		$('container').translate(0, 0);
+		wink.fx.translate(wink.byId('container'), 0, 0);
 		
 		setTimeout(function()
 		{
-			wink.fx.applyTransformTransition($('container'), '400ms');	
+			wink.fx.applyTransformTransition(wink.byId('container'), '400ms');	
 		}, 1);
 	},
 	

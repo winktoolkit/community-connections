@@ -58,181 +58,181 @@ df.member = (function()
 		var googlePlus    = df.members.getGooglePlus(id)[0];
 		var twitter       = df.members.getTwitter(id)[0];
 		
-		$('member_name').innerHTML = firstName.content + ' ' + lastName.content;
+		wink.byId('member_name').innerHTML = firstName.content + ' ' + lastName.content;
 		
 		if ( wink.isSet(company) )
 		{
-			$('member_company').innerHTML = company.content;
+			wink.byId('member_company').innerHTML = company.content;
 		} else
 		{
-			$('member_company').innerHTML = 'n/a';
+			wink.byId('member_company').innerHTML = 'n/a';
 		}
 		
 		if (  wink.isSet(project) )
 		{
-			$('member_project').innerHTML = project.content;
+			wink.byId('member_project').innerHTML = project.content;
 		} else
 		{
-			$('member_project').innerHTML = 'n/a';
+			wink.byId('member_project').innerHTML = 'n/a';
 		}
 		
 		if (  wink.isSet(picture) )
 		{
-			$('member_picture').src = picture.content;
+			wink.byId('member_picture').src = picture.content;
 		} else
 		{
-			$('member_picture').src = './images/avatar.jpg';
+			wink.byId('member_picture').src = './images/avatar.jpg';
 		}
 		
 		if (  wink.isSet(bio) )
 		{
-			$('member_bio').innerHTML = bio.content;
+			wink.byId('member_bio').innerHTML = bio.content;
 		} else
 		{
-			$('member_bio').innerHTML = 'n/a';
+			wink.byId('member_bio').innerHTML = 'n/a';
 		}
 		
 		if (  wink.isSet(twitter) )
 		{
-			$('member_twitter').href = 'http://www.twitter.com/' + twitter.content;
-			$('member_twitter').style.display = 'inline-block';
+			wink.byId('member_twitter').href = 'http://www.twitter.com/' + twitter.content;
+			wink.byId('member_twitter').style.display = 'inline-block';
 		} else
 		{
-			$('member_twitter').style.display = 'none';
+			wink.byId('member_twitter').style.display = 'none';
 		}
 		
 		if (  wink.isSet(website) )
 		{
-			$('member_website').href = website.content;
-			$('member_website').style.display = 'inline-block';
+			wink.byId('member_website').href = website.content;
+			wink.byId('member_website').style.display = 'inline-block';
 		} else
 		{
-			$('member_website').style.display = 'none';
+			wink.byId('member_website').style.display = 'none';
 		}
 		
 		if (  wink.isSet(location) )
 		{
-			$('member_location').href = 'http://maps.google.com/maps?q=' + encodeURIComponent(location.content);
-			$('member_location').style.display = 'inline-block';
+			wink.byId('member_location').href = 'http://maps.google.com/maps?q=' + encodeURIComponent(location.content);
+			wink.byId('member_location').style.display = 'inline-block';
 		} else
 		{
-			$('member_location').style.display = 'none';
+			wink.byId('member_location').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question1) )
 		{
-			$('member_question1').innerHTML = '<div class="question">What is your favourite occupation?</div><div class="answer"><i>' + question1.content + '</i></div>';
-			$('member_question1').style.display = 'block';
+			wink.byId('member_question1').innerHTML = '<div class="question">What is your favourite occupation?</div><div class="answer"><i>' + question1.content + '</i></div>';
+			wink.byId('member_question1').style.display = 'block';
 		} else
 		{
-			$('member_question1').style.display = 'none';
+			wink.byId('member_question1').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question2) )
 		{
-			$('member_question2').innerHTML = '<div class="question">What is your favorite programming language?</div><div class="answer"><i>' + question2.content + '</i></div>';
-			$('member_question2').style.display = 'block';
+			wink.byId('member_question2').innerHTML = '<div class="question">What is your favorite programming language?</div><div class="answer"><i>' + question2.content + '</i></div>';
+			wink.byId('member_question2').style.display = 'block';
 		} else
 		{
-			$('member_question2').style.display = 'none';
+			wink.byId('member_question2').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question3) )
 		{
-			$('member_question3').innerHTML = '<div class="question">Where would you like to live?</div><div class="answer"><i>' + question3.content + '</i></div>';
-			$('member_question3').style.display = 'block';
+			wink.byId('member_question3').innerHTML = '<div class="question">Where would you like to live?</div><div class="answer"><i>' + question3.content + '</i></div>';
+			wink.byId('member_question3').style.display = 'block';
 		} else
 		{
-			$('member_question3').style.display = 'none';
+			wink.byId('member_question3').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question4) )
 		{
-			$('member_question4').innerHTML = '<div class="question">If not yourself, who would you be?</div><div class="answer"><i>' + question4.content + '</i></div>';
-			$('member_question4').style.display = 'block';
+			wink.byId('member_question4').innerHTML = '<div class="question">If not yourself, who would you be?</div><div class="answer"><i>' + question4.content + '</i></div>';
+			wink.byId('member_question4').style.display = 'block';
 		} else
 		{
-			$('member_question4').style.display = 'none';
+			wink.byId('member_question4').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question5) )
 		{
-			$('member_question5').innerHTML = '<div class="question">What is your favourite heroes in World history</div><div class="answer"><i>' + question5.content + '</i></div>';
-			$('member_question5').style.display = 'block';
+			wink.byId('member_question5').innerHTML = '<div class="question">What is your favourite heroes in World history</div><div class="answer"><i>' + question5.content + '</i></div>';
+			wink.byId('member_question5').style.display = 'block';
 		} else
 		{
-			$('member_question5').style.display = 'none';
+			wink.byId('member_question5').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question6) )
 		{
-			$('member_question6').innerHTML = '<div class="question">What you hate the most</div><div class="answer"><i>' + question6.content + '</i></div>';
-			$('member_question6').style.display = 'block';
+			wink.byId('member_question6').innerHTML = '<div class="question">What you hate the most</div><div class="answer"><i>' + question6.content + '</i></div>';
+			wink.byId('member_question6').style.display = 'block';
 		} else
 		{
-			$('member_question6').style.display = 'none';
+			wink.byId('member_question6').style.display = 'none';
 		}
 		
 		if (  wink.isSet(question7) )
 		{
-			$('member_question7').innerHTML = '<div class="question">The natural talent you\'d like to be gifted with</div><div class="answer"><i>' + question7.content + '</i></div>';
-			$('member_question7').style.display = 'block';
+			wink.byId('member_question7').innerHTML = '<div class="question">The natural talent you\'d like to be gifted with</div><div class="answer"><i>' + question7.content + '</i></div>';
+			wink.byId('member_question7').style.display = 'block';
 		} else
 		{
-			$('member_question7').style.display = 'none';
+			wink.byId('member_question7').style.display = 'none';
 		}
 		
 		if (  wink.isSet(contributions) )
 		{
-			$('member_contributions').innerHTML = '<b>' + firstName.content + '\'s contributions: </b><i>' + contributions.content + '</i>';
-			$('member_contributions').style.display = 'block';
+			wink.byId('member_contributions').innerHTML = '<b>' + firstName.content + '\'s contributions: </b><i>' + contributions.content + '</i>';
+			wink.byId('member_contributions').style.display = 'block';
 		} else
 		{
-			$('member_contributions').style.display = 'none';
+			wink.byId('member_contributions').style.display = 'none';
 		}
 		
 		if (  wink.isSet(commiterSince) )
 		{
-			$('member_commiter_since').innerHTML = '<b>' + firstName.content + ' commits since: </b><i>' + commiterSince.content + '</i>';
-			$('member_commiter_since').style.display = 'block';
+			wink.byId('member_commiter_since').innerHTML = '<b>' + firstName.content + ' commits since: </b><i>' + commiterSince.content + '</i>';
+			wink.byId('member_commiter_since').style.display = 'block';
 		} else
 		{
-			$('member_commiter_since').style.display = 'none';
+			wink.byId('member_commiter_since').style.display = 'none';
 		}
 		
 		if (  wink.isSet(irc) )
 		{
-			$('member_irc').innerHTML = '<b>' + firstName.content + ' on IRC: </b><i>' + irc.content + '</i>';
-			$('member_irc').style.display = 'block';
+			wink.byId('member_irc').innerHTML = '<b>' + firstName.content + ' on IRC: </b><i>' + irc.content + '</i>';
+			wink.byId('member_irc').style.display = 'block';
 		} else
 		{
-			$('member_irc').style.display = 'none';
+			wink.byId('member_irc').style.display = 'none';
 		}
 		
 		if (  wink.isSet(facebook) )
 		{
-			$('member_facebook').innerHTML = '<b>' + firstName.content + ' on Facebook: </b><i><a href="' + facebook.content + '" target="_blank">visit</a></i>';
-			$('member_facebook').style.display = 'block';
+			wink.byId('member_facebook').innerHTML = '<b>' + firstName.content + ' on Facebook: </b><i><a href="' + facebook.content + '" target="_blank">visit</a></i>';
+			wink.byId('member_facebook').style.display = 'block';
 		} else
 		{
-			$('member_facebook').style.display = 'none';
+			wink.byId('member_facebook').style.display = 'none';
 		}
 		
 		if (  wink.isSet(googlePlus) )
 		{
-			$('member_google_plus').innerHTML = '<b>' + firstName.content + ' on Google+: </b><i><a href="' + googlePlus.content + '" target="_blank">visit</a></i>';
-			$('member_google_plus').style.display = 'block';
+			wink.byId('member_google_plus').innerHTML = '<b>' + firstName.content + ' on Google+: </b><i><a href="' + googlePlus.content + '" target="_blank">visit</a></i>';
+			wink.byId('member_google_plus').style.display = 'block';
 		} else
 		{
-			$('member_google_plus').style.display = 'none';
+			wink.byId('member_google_plus').style.display = 'none';
 		}
 		
 		
 		this.scroller.updateTargetSize();
 		this.scroller.scrollTo(0, 0, 0);
 		
-		wink.fx.apply($('container'), {'transition-timing-function': 'linear'});
-		$('container').translate(-window.innerWidth, 0);
+		wink.fx.apply(wink.byId('container'), {'transition-timing-function': 'linear'});
+		wink.fx.translate(wink.byId('container'), -window.innerWidth, 0);
 	};
 	
 	return member;

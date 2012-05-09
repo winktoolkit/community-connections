@@ -17,10 +17,10 @@ df.splash = (function()
 		df.members.init();
 		df.member.init();
 		
-		$('spinner').innerHTML = 'enter';
-		$('spinner').style.fontSize = '50px';
+		wink.byId('spinner').innerHTML = 'enter';
+		wink.byId('spinner').style.fontSize = '50px';
 		
-		$('spinner').addEventListener('click', this.hide, false);
+		wink.byId('spinner').addEventListener('click', this.hide, false);
 		
 		df.members.preLoadPictures();
 	};
@@ -30,10 +30,10 @@ df.splash = (function()
 	 */
 	splash.hide = function()
 	{
-		$('wrapper').removeChild($('splash'));
+		wink.byId('wrapper').removeChild(wink.byId('splash'));
 		
-		$('container').style.visibility = 'visible';
-		$('options').style.visibility = 'visible';
+		wink.byId('container').style.visibility = 'visible';
+		wink.byId('options').style.visibility = 'visible';
 	};
 	
 	return splash;

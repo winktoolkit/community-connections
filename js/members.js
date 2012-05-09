@@ -45,7 +45,7 @@ df.members = (function()
 			li.innerHTML = '<a href="#" onclick="df.member.display(null, ' + firstNames[i].id + ')">' + firstNames[i].content + ' ' + lastNames[i].content + '</a><span class="w_icon w_chevron"></span>';
 			li.className = 'w_list_item w_border_bottom w_bg_light';
 			
-			$('content').appendChild(li);
+			wink.byId('content').appendChild(li);
 		}
 		
 		var properties =
@@ -307,8 +307,8 @@ df.members = (function()
 	 */
 	members.display = function()
 	{
-		wink.fx.apply($('container'), {'transition-timing-function': 'linear'});
-		$('container').translate(0, 0);
+		wink.fx.apply(wink.byId('container'), {'transition-timing-function': 'linear'});
+		wink.fx.translate(wink.byId('container'), 0, 0);
 	};
 	
 	/**
@@ -316,12 +316,12 @@ df.members = (function()
 	 */
 	members.displayList = function()
 	{
-		$('mosaic').style.display = 'none';
-		$('content').style.display = 'block';
+		wink.byId('mosaic').style.display = 'none';
+		wink.byId('content').style.display = 'block';
 		
-		$('coverflow').style.display = 'none';
-		$('carousel').style.display = 'none';
-		$('members_scroller').style.display = 'block';
+		wink.byId('coverflow').style.display = 'none';
+		wink.byId('carousel').style.display = 'none';
+		wink.byId('members_scroller').style.display = 'block';
 		
 		this.scroller.updateTargetSize();
 	};
@@ -331,9 +331,9 @@ df.members = (function()
 	 */
 	members.displayCarousel = function()
 	{
-		$('coverflow').style.display = 'none';
-		$('carousel').style.display = 'block';
-		$('members_scroller').style.display = 'none';
+		wink.byId('coverflow').style.display = 'none';
+		wink.byId('carousel').style.display = 'block';
+		wink.byId('members_scroller').style.display = 'none';
 		
 		if ( !wink.isSet(this.carousel) )
 		{
@@ -372,9 +372,9 @@ df.members = (function()
 	 */
 	members.displayCoverflow = function()
 	{
-		$('coverflow').style.display = 'block';
-		$('carousel').style.display = 'none';
-		$('members_scroller').style.display = 'none';
+		wink.byId('coverflow').style.display = 'block';
+		wink.byId('carousel').style.display = 'none';
+		wink.byId('members_scroller').style.display = 'none';
 		
 		if ( !wink.isSet(this.coverflow) )
 		{
@@ -401,7 +401,7 @@ df.members = (function()
 				title.className = 'coverflowTitle';
 				title.innerHTML = firstName[i].content + ' ' + lastName[i].content;
 
-				$('coverflow_titles').appendChild(title);
+				wink.byId('coverflow_titles').appendChild(title);
 			}
 			
 			var properties = 
@@ -419,7 +419,7 @@ df.members = (function()
 			};
 			
 			this.coverflow = new wink.ui.xyz.CoverFlow(properties);
-			$('coverflow').appendChild(this.coverflow.getDomNode());
+			wink.byId('coverflow').appendChild(this.coverflow.getDomNode());
 		}
 	};
 	
@@ -430,12 +430,12 @@ df.members = (function()
 	{
 		var factor = 3;
 		
-		$('mosaic').style.display = 'block';
-		$('content').style.display = 'none';
+		wink.byId('mosaic').style.display = 'block';
+		wink.byId('content').style.display = 'none';
 		
-		$('coverflow').style.display = 'none';
-		$('carousel').style.display = 'none';
-		$('members_scroller').style.display = 'block';
+		wink.byId('coverflow').style.display = 'none';
+		wink.byId('carousel').style.display = 'none';
+		wink.byId('members_scroller').style.display = 'block';
 		
 		if ( window.innerWidth > 320 )
 		{
@@ -456,7 +456,7 @@ df.members = (function()
 					df.member.display(null, this.value);
 				};
 				
-				$('mosaic').appendChild(this.pictures[i].content);
+				wink.byId('mosaic').appendChild(this.pictures[i].content);
 			}
 			
 			this.mosaic = true;
