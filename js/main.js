@@ -34,7 +34,7 @@ df.main = (function()
 		
 		require(
 		[
-			"wink/ui/layout/scroller/js/scroller.js",
+			"wink/ui/layout/scroller/js/scroller",
 			"dojox/mobile",
 			"dojox/mobile/parser",
 			"dojox/mobile/compat",
@@ -43,7 +43,7 @@ df.main = (function()
 			"dojox/mobile/Opener",
 			"dojox/mobile/SpinWheel",
 			"dojo/data/ItemFileReadStore",
-			"wink/ui/xyz/coverflow/js/coverflow.js"
+			"wink/ui/xyz/coverflow/js/coverflow"
 		], function(Scroller, dojoMobile)
 		{
 			df.utils.sizeElements();
