@@ -337,6 +337,8 @@ df.members = (function()
 		
 		if ( !wink.isSet(this.carousel) )
 		{
+			this.carousel = new dojox.mobile.Carousel({height:"220px", navButton:false, numVisible:1}, "carousel");
+			
 			var firstName = df.members.getFirstName();
 			var lastName = df.members.getLastName();
 			
@@ -352,7 +354,11 @@ df.members = (function()
 					picture = './images/avatar.jpg';
 				}
 				
-				carousel_structure.items.push({src: picture, headerText: firstName[i].content + ' ' + lastName[i].content});
+				var view = new dojox.mobile.SwapView();
+				this.carousel.addChild(view);
+
+				var item = new dojox.mobile.CarouselItem({src: picture, headerText: firstName[i].content + ' ' + lastName[i].content});
+				item.placeAt(view.containerNode);
 			}
 			
 			dojo.subscribe('/dojox/mobile/carouselSelect', function(w, img, item, idx)
@@ -360,10 +366,7 @@ df.members = (function()
 				df.member.display(null, idx+2);
 			});
 			
-			this.carousel = dijit.byId('carousel');
-			this.store = new dojo.data.ItemFileReadStore({data: carousel_structure});
-			
-			this.carousel.setStore(this.store);
+			this.carousel.startup();
 		}
 	};
 	

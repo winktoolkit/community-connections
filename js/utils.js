@@ -63,6 +63,6 @@ df.utils =
 		// FIX: not working
 		var v = node.value;
 		var w = dijit.byId("spin");
-		w.setValue(v);
+		w.value = v;
 	}
 };

@@ -4,3 +4,6 @@
 /dojox
 
 *.project
+/util
+/build
+/.settings

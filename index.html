@@ -16,7 +16,7 @@
     	<link href='./css/wink-1.4.0.min.css' rel='stylesheet' type='text/css'>
     	<link href='./css/main.css' rel='stylesheet' type='text/css'>
   
-    	<script type="text/javascript" src="./dojo/dojo.js" djConfig="async: true"></script>
+    	<script type="text/javascript" src="./build/dojo/dojo.js" djConfig="async: true"></script>
 	
 		<script type="text/javascript" src="./js/main.js"></script>
 		<script type="text/javascript" src="./js/splash.js"></script>
@@ -52,16 +52,16 @@
 				<br />
 				<br />
 				<br />
-				<input type="radio" id="rb1" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)" checked><label for="rb1" style="color: #fff;margin-left: 10px">list</label>
+				<input type="radio" id="rb1" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode('rb1')" checked><label for="rb1" style="color: #fff;margin-left: 10px">list</label>
 				<br />
 				<br />
-				<input type="radio" id="rb2" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb2" style="color: #fff;margin-left: 10px">carousel</label>
+				<input type="radio" id="rb2" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode('rb2')"><label for="rb2" style="color: #fff;margin-left: 10px">carousel</label>
 				<br />
 				<br />
-				<input type="radio" id="rb3" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb3" style="color: #fff;margin-left: 10px">coverflow</label>
+				<input type="radio" id="rb3" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode('rb3')"><label for="rb3" style="color: #fff;margin-left: 10px">coverflow</label>
 				<br />
 				<br />
-				<input type="radio" id="rb4" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode(event)"><label for="rb4" style="color: #fff;margin-left: 10px">mosaic</label>
+				<input type="radio" id="rb4" dojoType="dojox.mobile.RadioButton" name="mobileRadio" value="Large" onchange="df.main.changeMode('rb4')"><label for="rb4" style="color: #fff;margin-left: 10px">mosaic</label>
 				<br />
 				<br />
 				<br />
@@ -80,7 +80,7 @@
 					<div id="list">
 						<div id="coverflow" style="display: none;" class="wrapper"></div>
 						<div id="coverflow_titles" style="display: none;"></div>
-						<div id="carousel" dojoType="dojox.mobile.Carousel" height="220px" numVisible="1" style="display: none;"></div>
+						<div id="carousel" style="display: none;"></div>
 						<div id="members_scroller" class="wrapper">
 							<div id="scrollContent">
 								<ul id="content" class="w_list w_border">
@@ -188,7 +188,7 @@
 			</h1>
 			
 			<div id="spin" dojoType="dojox.mobile.SpinWheel">
-				<div id="wheel" dojoType="dojox.mobile.SpinWheelSlot" labels="['english','french','german','japanese']" style="width: 100%;"></div>
+				<div id="wheel" dojoType="dojox.mobile.SpinWheelSlot" data-dojo-props="labels:['english','french','german','japanese']" style="width: 100%;"></div>
 			</div>
 		</div>
 	</body>
